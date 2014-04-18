@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="./css/keys.css">          -->
+  <!-- <link rel="stylesheet" href="./css/main.css">          -->
+
+  <script type="text/javascript" src="js/eventemitter2.js"></script>
+  <script type="text/javascript" src="js/ros.js"></script>
+  <script type="text/javascript" src="js/turtle.js"></script>
+  <script type="text/javascript" src="js/turtlesim.js"></script>
+  <script type="text/javascript">
+    function start() {
+      var ros = new ROS('ws://localhost:9090');
+      ros.on('connection', function() {
+        var context = document.getElementById('world').getContext('2d');
+        var turtleSim = new TurtleSim({
+          ros     : ros
+        , context : context
+        });
+        turtleSim.spawnTurtle('turtle1');
+        turtleSim.draw();
+      });
+    }
+</script>
+</head>
+
+<body onload="start()">
+  <style>
+    #feedback { font-size: 1.5em; }
+    #selectable .ui-selecting { background: #FECA40; }
+    #selectable .ui-selected { background: #F39814; color: white; }
+    #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #selectable li { margin: 3px; padding: 0.4em; font-size: 1.2em; height: 18px; }
+  </style>
+
+  <center>
+    <canvas id="world" width="500" height="500" style="border: 2px solid black"></canvas>
+  </center>
+</body>
+</html>
+
