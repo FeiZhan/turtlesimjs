@@ -1,0 +1,27 @@
+{
+  "name": "turtlesimjs",
+  "version": "0.0.0",
+  "description": "turtlesimJS for ROS with almost identical features of turtlesim",
+  "main": "turtlesim.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FeiZhan/turtlesimjs.git"
+  },
+  "keywords": [
+    "ROS",
+    "turtlesim",
+    "js"
+  ],
+  "author": "FeiZhan",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/FeiZhan/turtlesimjs/issues"
+  },
+  "homepage": "https://github.com/FeiZhan/turtlesimjs",
+  "devDependencies": {
+    "grunt": "^0.4.4"
+  }
+}

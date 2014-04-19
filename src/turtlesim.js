@@ -122,6 +122,7 @@ TURTLESIMJS.TurtleSim.prototype.spawnTurtle = function (options) {
 		ros     : that.ros,
 		context : that.context,
 		name    : options.name,
+		pen	    : options.pen,
 		pose    : initial_pose,
 		img		: options.img
 	});
