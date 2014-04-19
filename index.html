@@ -10,15 +10,15 @@
 		<style>
 #world {
 	border: 2px solid black;
-	width: 500px;
-	height: 500px;
+	width: 500;
+	height: 500;
 }
 		</style>
 		<script>
+var turtle_sim;
 function onload() {
 	// connecting to ROS
 	var ros = new ROSLIB.Ros();
-	// If there is an error on the backend, an 'error' emit will be emitted.
 	ros.on('error', function(error) {
 		console.log(error);
 	});
@@ -27,24 +27,23 @@ function onload() {
 		console.log('Connection made', 'ws://localhost:9090');
 		// create turtlesim
 		var context = document.getElementById('world').getContext('2d');
-		var turtleSim = new TURTLESIMJS.TurtleSim({
+		turtle_sim = new TURTLESIMJS.TurtleSim({
 			ros			: ros,
 			context		: context,
 			keyControl	: true,
 		})
-		.updateInterval(100)
 		// create turtle
 		.spawnTurtle({name: 'turtle1'})
 		.spawnTurtle({name: 'turtle2'});
 	});
-	// Create a connection to the rosbridge WebSocket server.
+	// create a connection to the rosbridge WebSocket server
 	ros.connect('ws://localhost:9090');
 }
 		</script>
 	</head>
 
 	<body onload="onload()">
-		<canvas id="world"></canvas>
+		<canvas id="world" width="500" height="500"></canvas>
 	</body>
 
 </html>
