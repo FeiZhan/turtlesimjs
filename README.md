@@ -1,13 +1,13 @@
 turtlesimjs
 ========
 
-#### turtlesimJS for ROS with almost identical features of turtlesim
+# turtlesimJS for ROS with almost identical features of turtlesim
 
-### Examples
+## Examples
 
 [An example](http://feizhan.github.io/turtlesimjs/index.html)
 
-### Usage
+## Usage
 
 Pre-built files can be found in either [turtlesim.js](build/turtlesim.js) or [turtlesim.min.js](build/turtlesim.min.js).
 
@@ -22,9 +22,9 @@ and
 <canvas id="world" width="500" height="500"></canvas>
 
 
-### APIs
+## APIs
 
-## Create a turtlesim
+### Create a turtlesim
 
 var turtlesim = new TURTLESIMJS.TurtleSim({
 	// a ros instance
@@ -39,7 +39,7 @@ var turtlesim = new TURTLESIMJS.TurtleSim({
 	interval	: 100
 })
 
-## Create a turtle
+### Create a turtle
 
 turtlesim.spawnTurtle({
 	// a unique name for the turtle
@@ -60,19 +60,19 @@ turtlesim.spawnTurtle({
 	img			: "a random turtle image.png"
 })
 
-## Subscribed Topics
+### Subscribed Topics
 
 turtleX/cmd_vel (geometry_msgs/Twist)
 
 The linear and angular command velocity for turtleX. The turtle will execute a velocity command for 1 second then time out.
 
-## Published Topics
+### Published Topics
 
 turtleX/pose (turtlesim/Pose)
 
 The x, y, theta, linear velocity, and angular velocity of turtleX.
 
-## Services
+### Services
 
 clear
 
@@ -102,7 +102,7 @@ turtleX/teleport_relative
 
 Teleports the turtleX a linear and angular distance from the turtles current position.
 
-## Parameters
+### Parameters
 
 ~background_b
 
@@ -116,13 +116,13 @@ Sets the green channel of the background color.
 
 Sets the red channel of the background color.
 
-### Dependencies
+## Dependencies
 
 turtlesimjs depends on:
 
 [EventEmitter2](https://github.com/hij1nx/EventEmitter2).
 [roslibjs](https://github.com/RobotWebTools/roslibjs).
 
-### License
+## License
 
 turtlesimjs is released with a BSD license. For full terms and conditions, see the [LICENSE](LICENSE) file.
