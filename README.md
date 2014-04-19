@@ -13,7 +13,7 @@ Pre-built files can be found in either [turtlesim.js](build/turtlesim.js) or [tu
 
 ## Installation
 
-In html: add
+In html, add
 ```
 <script src="build/turtlesim.js"></script>
 ```
@@ -21,6 +21,21 @@ and
 ```
 <canvas id="world" width="500" height="500"></canvas>
 ```
+
+In command line, run roscore
+```
+roscore
+```
+, rosbridge
+```
+roslaunch rosbridge_server rosbridge_websocket.launch
+```
+, and turtle_teleop_key
+```
+rosrun turtlesim turtle_teleop_key
+```.
+
+Just like running turtlesim, you can use turtle_teleop_key to control turtlesimJS.
 
 ## APIs
 
@@ -132,8 +147,11 @@ turtlesimjs depends on:
 [EventEmitter2](https://github.com/hij1nx/EventEmitter2),
 [roslibjs](https://github.com/RobotWebTools/roslibjs).
 
-This project mimics [turtlesim](https://github.com/ros/ros_tutorials).
-
 ## License
 
 turtlesimjs is released with a BSD license. For full terms and conditions, see the [LICENSE](LICENSE) file.
+
+## Acknowledgement
+
+
+This project follows the idea of [turtlesimjs](https://github.com/baalexander/turtlesimjs), and it mimics [turtlesim](https://github.com/ros/ros_tutorials).
