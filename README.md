@@ -1,7 +1,7 @@
 turtlesimjs
 ========
 
-# turtlesimJS for ROS with almost identical features of turtlesim
+### turtlesimJS for ROS with almost identical features of turtlesim
 
 ## Examples
 
@@ -14,18 +14,19 @@ Pre-built files can be found in either [turtlesim.js](build/turtlesim.js) or [tu
 ## Installation
 
 In html: add
-
+```
 <script src="build/turtlesim.js"></script>
-
+```
 and
-
+```
 <canvas id="world" width="500" height="500"></canvas>
-
+```
 
 ## APIs
 
 ### Create a turtlesim
 
+```
 var turtlesim = new TURTLESIMJS.TurtleSim({
 	// a ros instance
 	ros			: ros,
@@ -38,9 +39,11 @@ var turtlesim = new TURTLESIMJS.TurtleSim({
 	// the interval to update the turtlesim
 	interval	: 100
 })
+```
 
 ### Create a turtle
 
+```
 turtlesim.spawnTurtle({
 	// a unique name for the turtle
 	name		: 'turtle1',
@@ -59,6 +62,7 @@ turtlesim.spawnTurtle({
 	// image for a turtle
 	img			: "a random turtle image.png"
 })
+```
 
 ### Subscribed Topics
 
