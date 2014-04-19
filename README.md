@@ -40,6 +40,7 @@ var turtlesim = new TURTLESIMJS.TurtleSim({
 	interval	: 100
 })
 ```
+Some items can be ignored.
 
 ### Create a turtle
 
@@ -63,6 +64,7 @@ turtlesim.spawnTurtle({
 	img			: "a random turtle image.png"
 })
 ```
+Some items can be ignored.
 
 ### Subscribed Topics
 ```
@@ -77,6 +79,9 @@ turtleX/pose (turtlesim/Pose)
 The x, y, theta, linear velocity, and angular velocity of turtleX.
 
 ### Services
+
+It mimics the services provided by turtlesim. Unfortunately roslibjs does not provide APIs to create a service, so the following functions do not work.
+
 ```
 clear
 ```
@@ -124,8 +129,10 @@ Sets the red channel of the background color.
 
 turtlesimjs depends on:
 
-[EventEmitter2](https://github.com/hij1nx/EventEmitter2).
+[EventEmitter2](https://github.com/hij1nx/EventEmitter2),
 [roslibjs](https://github.com/RobotWebTools/roslibjs).
+
+This project mimics [turtlesim](https://github.com/ros/ros_tutorials).
 
 ## License
 
