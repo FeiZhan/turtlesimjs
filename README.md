@@ -65,59 +65,59 @@ turtlesim.spawnTurtle({
 ```
 
 ### Subscribed Topics
-
+```
 turtleX/cmd_vel (geometry_msgs/Twist)
-
+```
 The linear and angular command velocity for turtleX. The turtle will execute a velocity command for 1 second then time out.
 
 ### Published Topics
-
+```
 turtleX/pose (turtlesim/Pose)
-
+```
 The x, y, theta, linear velocity, and angular velocity of turtleX.
 
 ### Services
-
+```
 clear
-
+```
 Clears the turtlesim background and sets the color to the value of the background parameters.
-
+```
 reset
-
+```
 Resets the turtlesim to the start configuration and sets the background color to the value of the background.
-
+```
 kill
-
+```
 Kills a turtle by name.
-
+```
 spawn
-
+```
 Spawns a turtle at (x, y, theta) and returns the name of the turtle. Also will take name for argument but will fail if a duplicate name.
-
+```
 turtleX/set_pen
-
+```
 Sets the pen's color (r g b), width (width), and turns the pen on and off (off).
-
+```
 turtleX/teleport_absolute
-
+```
 Teleports the turtleX to (x, y, theta).
-
+```
 turtleX/teleport_relative
-
+```
 Teleports the turtleX a linear and angular distance from the turtles current position.
 
 ### Parameters
-
-~background_b
-
+```
+/background_b
+```
 Sets the blue channel of the background color.
-
-~background_g
-
+```
+/background_g
+```
 Sets the green channel of the background color.
-
-~background_r
-
+```
+/background_r
+```
 Sets the red channel of the background color.
 
 ## Dependencies
