@@ -33,9 +33,8 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 , and turtle_teleop_key
 ```
 rosrun turtlesim turtle_teleop_key
-```.
-
-Just like running turtlesim, you can use turtle_teleop_key to control turtlesimJS.
+```
+. Just like running turtlesim, you can use turtle_teleop_key to control turtlesimJS.
 
 ## APIs
 
